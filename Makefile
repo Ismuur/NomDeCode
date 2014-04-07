@@ -5,31 +5,36 @@
 ## Login   <lambol_a@epitech.net>
 ##
 ## Started on  Mon Apr  7 15:13:39 2014 Lambolez Aymeric
-## Last update Mon Apr  7 15:19:17 2014 Lambolez Aymeric
+## Last update Mon Apr  7 15:29:11 2014 Eric
 ##
 
-SRC	=	mot_graph.cpp
+SRC	=	Class/GameEngine.cpp\
+		core/main.cpp
 
-OBJ	=	$(SRC:.c=.o)
+OBJ	=	$(SRC:.cpp=.o)
 
 NAME	=	Game
+
+LIBS	=	-lsfml-graphics -lsfml-window -lsfml-system
 
 CC	=	g++
 
 FLAGS	=	-W -Wall
 
+HEADERS	=	-I./headers/
+
 all:		$(NAME)
 
 %.o:		%.cpp
-	$(CC) -c $^ -o $@ $(FLAGS)
+	$(CC) -c $^ -o $@ $(FLAGS) $(HEADERS)
 
 $(NAME):	$(OBJ)
-	$(CC) $^ -o $@ $(FLAGS)
+	$(CC) $^ -o $@ $(FLAGS) $(HEADERS) $(LIBS)
 
 clean:
 	$(RM) $(OBJ)
 
-fclean:		$(OBJ)
+fclean:	clean
 	$(RM) $(NAME)
 
 re:		fclean all
