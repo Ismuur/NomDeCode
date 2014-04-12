@@ -5,10 +5,10 @@
 ## Login   <lambol_a@epitech.net>
 ##
 ## Started on  Mon Apr  7 15:13:39 2014 Lambolez Aymeric
-## Last update Mon Apr  7 15:29:11 2014 Eric
+## Last update Sat Apr 12 13:32:19 2014 Lambolez Aymeric
 ##
 
-SRC	=	Class/GameEngine.cpp\
+SRC	=	Class/Parser.cpp\
 		core/main.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
