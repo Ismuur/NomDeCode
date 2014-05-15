@@ -5,7 +5,7 @@
 // Login   <lambol_a@epitech.net>
 //
 // Started on  Wed Apr  9 10:57:44 2014 Lambolez Aymeric
-// Last update Sat Apr 12 14:05:55 2014 Lambolez Aymeric
+// Last update Sat Apr 26 14:42:34 2014 Lambolez Aymeric
 //
 
 #include		"Parser.hh"
@@ -55,4 +55,10 @@ void				Parser::pars(std::string const &path)
     }
   std::cout << "Parsing finish successfully\nwidth -> "
 	    << _width << "\nheight -> " << _height << std::endl;
+  for (y = 0; y < _height; y++)
+    {
+      for (x = 0; x < _width; x++)
+	std::cout << _map[y][x] << " ";
+      std::cout << std::endl;
+    }
 }
